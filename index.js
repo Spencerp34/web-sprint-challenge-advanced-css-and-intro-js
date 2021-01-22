@@ -220,9 +220,9 @@ console.log(artists[2].bio);
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
 // MY ANSWER THAT HAD TO BE COMMENTED OUT:
-// artists[8].name = "Vincent van Gogh";
-// console.log("TASK2")
-// console.log(artists[8].name);
+artists[8].name = "Vincent van Gogh";
+console.log("TASK2")
+console.log(artists[8].name);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -252,20 +252,22 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-  const filteredArray = artists.years;
-  const splitYears = filteredArray.split;
-  const numberYears = Number(splitYears [1] && [3])
-  for(let i = 0; i < array.length; i++)
-    if(numberYears <= 1900 && numberYears > 2000){
-    return filteredArray;
+  const filteredList = []
+  for(let i = 0; i < array.length; i++){
+    const splitYears = array[i].years.split(' - ');
+    const birthYear = Number(splitYears[0]);
+    const deathYear = Number(splitYears[1]);
+    if(birthYear >= 1900 && deathYear < 2000){
+      filteredList.push(array[i].name)
     }
-    else{
-      return "None";
-    }
+    
+  }
+  
+  return filteredList;
 }
 
-console.log("TASK4");
-console.log(get20s(artists)
+console.log("Task4")
+console.log(get20s(artists));
 
 
 
@@ -314,8 +316,8 @@ function addArtist(array, param1, param2, param3, param4, param5, param6){
       bio: param6
     }
   }
-  console.log(TASK6)
-  console.log(addArtist(artists, "20", "Spencer Patterson", "1998 - Present", "Web Design", "American", "I started web design about two weeks ago. I really hope I pass this sprint!"))
+  console.log("TASK6");
+  console.log(addArtist(artists, "20", "Spencer Patterson", "1998 - Present", "Web Design", "American", "I started web design about two weeks ago. I really hope I pass this sprint!"));
 
   
 
