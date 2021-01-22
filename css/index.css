@@ -128,9 +128,39 @@ button:hover{
 }
 
 .artist{
-    width:40%;
+    width:90%;
     text-align:center;
 }
 .artist img{
     width:100%;
+}
+
+/* MOBILE  */
+@media (max-width: 500px){
+
+    nav {
+        width: 70%;
+    }
+    nav a {
+        justify-content: space-between;
+    }
+    .title-container div {
+        width: 100%;
+    }
+    .artists-container{
+        width: 70%;
+        flex-flow: column wrap;
+        margin-bottom: 10vh;
+    }
+    .artist{
+        margin-bottom: 1vh;
+    }
+    .artist img {
+        width: 80%;
+        height: auto;
+    }
+    .bio{
+        font-size: 1.1rem;
+        text-align: center;
+    }
 }
