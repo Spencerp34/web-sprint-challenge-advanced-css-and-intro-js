@@ -307,17 +307,17 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(array, param1, param2, param3, param4, param5, param6){
-    return{
-      id: param1,
-      name: param2, 
-      years: param3,
-      genre: param4, 
-      nationality: param5,
-      bio: param6
-    }
+  return{
+    id: param1,
+    name: param2, 
+    years: param3,
+    genre: param4, 
+    nationality: param5,
+    bio: param6
   }
-  console.log("TASK6");
-  console.log(addArtist(artists, "20", "Spencer Patterson", "1998 - Present", "Web Design", "American", "I started web design about two weeks ago. I really hope I pass this sprint!"));
+}
+console.log("TASK6");
+console.log(addArtist(artists, "20", "Spencer Patterson", "1998 - Present", "Web Design", "American", "I started web design about two weeks ago. I really hope I pass this sprint!"));
 
   
 
